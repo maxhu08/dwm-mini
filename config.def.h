@@ -105,7 +105,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_bracketright,       setborderpx,    {.i = +2 } },                                      // decrease border width MOD+}
 	{ MODKEY,                       XK_Tab,                view,           {0} },                                             // tab tag MOD+Tab
 	{ MODKEY,                       XK_c,                  killclient,     {0} },                                             // close window MOD+c
-  { MODKEY,                       XK_f,                  togglefullscr,  {0} },                                             // toggle actualfullscreen MOD+f
+  // { MODKEY,                       XK_f,                  togglefullscr,  {0} },                                             // toggle actualfullscreen MOD+f
 	{ MODKEY|ShiftMask,             XK_z,                  unfloatvisible, {.v = &layouts[0]} },                              // make floating window tiled MOD+Z
 	// { MODKEY,                       XK_0,                  view,           {.ui = ~0 } },                                  // view all windows MOD+0
 	// { MODKEY|ShiftMask,             XK_0,                  tag,            {.ui = ~0 } },                                  // make window on all tags MOD+SHIFT+0

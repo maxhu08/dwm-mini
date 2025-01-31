@@ -63,8 +63,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask
-#define ALTKEY Mod1Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -89,7 +88,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_equal,              spawn,          SHCMD("exec ~/.hidden/scripts/emoji_picker.sh") },              // pick emoji MOD++ (requires script in ~/Dev/scripts/emoji_picker.sh)
 	{ MODKEY,                       XK_e,                  spawn,          SHCMD("exec nemo") },                              // open file manager (nemo) MOD+e
 	{ MODKEY,                       XK_b,                  togglebar,      {0} },                                             // show hide bar MOD+b
-	{ MODKEY|ALTKEY|ShiftMask,      XK_l,                  spawn,          SHCMD("exec slock") },                             // lockscreen MOD+ALT+L
+	{ MODKEY|ShiftMask,             XK_l,                  spawn,          SHCMD("exec slock") },                             // lockscreen MOD+ALT+L
 	{ MODKEY,                       XK_j,                  focusstack,     {.i = +1 } },                                      // focus window up stack MOD+J
 	{ MODKEY,                       XK_k,                  focusstack,     {.i = -1 } },                                      // focus window down stack MOD+K
 	{ MODKEY|ShiftMask,             XK_j,                  movestack,      {.i = +1 } },                                      // move window up stack MOD+J
@@ -102,21 +101,12 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,                  setcfact,       {.f = -0.25} },                                    // adjust cfact MOD+L
 	{ MODKEY|ShiftMask,             XK_o,                  setcfact,       {.f =  0.00} },                                    // adjust cfact MOD+O
 	{ MODKEY,                       XK_Return,             zoom,           {0} },                                             // MOD+Return
-	{ MODKEY|ALTKEY,                XK_u,                  incrgaps,       {.i = +10 } },                                     // adjust gaps MOD+ALT+u
-	{ MODKEY|ALTKEY|ShiftMask,      XK_u,                  incrgaps,       {.i = -10 } },                                     // adjust gaps MOD+ALT+U
 	{ MODKEY|ShiftMask,             XK_bracketleft,        setborderpx,    {.i = -2 } },                                      // increase border width MOD+{
 	{ MODKEY|ShiftMask,             XK_bracketright,       setborderpx,    {.i = +2 } },                                      // decrease border width MOD+}
 	{ MODKEY,                       XK_Tab,                view,           {0} },                                             // tab tag MOD+Tab
 	{ MODKEY,                       XK_c,                  killclient,     {0} },                                             // close window MOD+c
   { MODKEY,                       XK_f,                  togglefullscr,  {0} },                                             // toggle actualfullscreen MOD+f
 	{ MODKEY|ShiftMask,             XK_z,                  unfloatvisible, {.v = &layouts[0]} },                              // make floating window tiled MOD+Z
-	{ MODKEY|ALTKEY,                XK_1,                  setlayout,      {.v = &layouts[0]} },                              // change layout to tile MOD+ALT+1
-	{ MODKEY|ALTKEY,                XK_2,                  setlayout,      {.v = &layouts[13]} },                             // change layout to float MOD+ALT+2
-	{ MODKEY|ALTKEY,                XK_3,                  setlayout,      {.v = &layouts[1]} },                              // change layout to monocle MOD+ALT+3
-	{ MODKEY|ALTKEY,                XK_4,                  setlayout,      {.v = &layouts[11]} },                             // change layout to centeredmaster MOD+ALT+4
-	{ MODKEY|ALTKEY,                XK_5,                  setlayout,      {.v = &layouts[5]} },                              // change layout to bstac MOD+ALT+5
-	{ MODKEY|ALTKEY,                XK_6,                  setlayout,      {.v = &layouts[7]} },                              // change layout to grid MOD+ALT+6
-	{ MODKEY|ALTKEY,                XK_7,                  setlayout,      {.v = &layouts[2]} },                              // change layout to spiral MOD+ALT+7
 	// { MODKEY,                       XK_0,                  view,           {.ui = ~0 } },                                  // view all windows MOD+0
 	// { MODKEY|ShiftMask,             XK_0,                  tag,            {.ui = ~0 } },                                  // make window on all tags MOD+SHIFT+0
 	{ MODKEY,                       XK_comma,              focusmon,       {.i = -1 } },                                      // move window to monitor MOD+,

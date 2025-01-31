@@ -2,6 +2,12 @@
 
 A minimalistic version of my build of dwm, `dwm-rev1`
 
+changes made:
+
+- hide bar by default
+- hide borders by default
+- changed keybinds
+
 ## patches
 
 - `movestack` https://dwm.suckless.org/patches/movestack
